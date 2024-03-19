@@ -21,6 +21,7 @@ namespace PromedioApp
             PromedioTxt = new TextBox();
             TxtPromedio = new Label();
             CalcularP = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // Num1txt
@@ -96,9 +97,19 @@ namespace PromedioApp
             CalcularP.Text = "Calcular";
             CalcularP.Click += CalcularP_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(328, 121);
+            label1.Name = "label1";
+            label1.Size = new Size(67, 15);
+            label1.TabIndex = 8;
+            label1.Text = "Prueba text";
+            // 
             // Form1
             // 
             ClientSize = new Size(422, 176);
+            Controls.Add(label1);
             Controls.Add(CalcularP);
             Controls.Add(TxtPromedio);
             Controls.Add(PromedioTxt);
@@ -121,6 +132,7 @@ namespace PromedioApp
         private Label Nota2;
         private Label Nota3;
         private Label TxtPromedio;
+        private Label label1;
         private Button CalcularP;
 
         private void CalcularP_Click(object sender, EventArgs e)
