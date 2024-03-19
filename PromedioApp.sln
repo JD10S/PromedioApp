@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacionGUI", "PromedioApp\PresentacionGUI.csproj", "{C711384D-33F7-4070-8891-BE12640A7800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentacionGUI", "PromedioApp\PresentacionGUI.csproj", "{C711384D-33F7-4070-8891-BE12640A7800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{E6777FD4-261C-4000-92B2-45EE036E8A8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{D7407F2C-DA6E-4740-8E7D-84DDFCBE82A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C711384D-33F7-4070-8891-BE12640A7800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C711384D-33F7-4070-8891-BE12640A7800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C711384D-33F7-4070-8891-BE12640A7800}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E6777FD4-261C-4000-92B2-45EE036E8A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6777FD4-261C-4000-92B2-45EE036E8A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6777FD4-261C-4000-92B2-45EE036E8A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6777FD4-261C-4000-92B2-45EE036E8A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7407F2C-DA6E-4740-8E7D-84DDFCBE82A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7407F2C-DA6E-4740-8E7D-84DDFCBE82A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7407F2C-DA6E-4740-8E7D-84DDFCBE82A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7407F2C-DA6E-4740-8E7D-84DDFCBE82A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

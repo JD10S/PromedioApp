@@ -1,4 +1,5 @@
-using Entity;
+using Logica;
+
 
 namespace PromedioApp
 {
@@ -21,7 +22,6 @@ namespace PromedioApp
             PromedioTxt = new TextBox();
             TxtPromedio = new Label();
             CalcularP = new Button();
-            label1 = new Label();
             SuspendLayout();
             // 
             // Num1txt
@@ -97,19 +97,9 @@ namespace PromedioApp
             CalcularP.Text = "Calcular";
             CalcularP.Click += CalcularP_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(328, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(67, 15);
-            label1.TabIndex = 8;
-            label1.Text = "Prueba text";
-            // 
             // Form1
             // 
             ClientSize = new Size(422, 176);
-            Controls.Add(label1);
             Controls.Add(CalcularP);
             Controls.Add(TxtPromedio);
             Controls.Add(PromedioTxt);
@@ -132,28 +122,22 @@ namespace PromedioApp
         private Label Nota2;
         private Label Nota3;
         private Label TxtPromedio;
-        private Label label1;
         private Button CalcularP;
 
         private void CalcularP_Click(object sender, EventArgs e)
         {
-            Notas notas = new Notas();
-            if (int.TryParse(Num1txt.Text, out int nota1) &&
-                int.TryParse(Num2txt.Text, out int nota2) &&
-                int.TryParse(Num3txt.Text, out int nota3))
+            
+            if (int.TryParse(Num1txt.Text, out int Num1) &&
+               int.TryParse(Num2txt.Text, out int Num2) &&
+               int.TryParse(Num3txt.Text, out int Num3))
             {
-                notas.Num1 = nota1;
-                notas.Num2 = nota2;
-                notas.Num3 = nota3;
-
-                double promedio = (nota1 + nota2 + nota3) / 3.0;
+                double promedio = NotasCalculator.CalcularPromedio(Num1, Num2, Num3);
                 PromedioTxt.Text = promedio.ToString();
-                string resultado = promedio >= 3 ? "Ganó" : "Perdió";
+                string resultado = NotasCalculator.DeterminarResultado(promedio);
                 MessageBox.Show($"El promedio de las notas es: {promedio}. El estudiante {resultado} la asignatura.", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-
                 MessageBox.Show("Por favor, ingrese notas válidas en todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

@@ -7,7 +7,7 @@ namespace Entity
         public int Num2 { get; set; }
         public int Num3 { get; set; }
     }
-  
+
 
     
 }
